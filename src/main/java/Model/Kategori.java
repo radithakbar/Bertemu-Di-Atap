@@ -9,19 +9,24 @@ package Model;
  * @author Asus
  */
 public class Kategori {
-   private int idKtegori;
+   private int idKategori;
    private String namaKategori;
 
     public Kategori(int idKtegori, String namaKategori) {
-        this.idKtegori = idKtegori;
+        this.idKategori = idKtegori;
         this.namaKategori = namaKategori;
     }
 
-    public int getIdKtegori() {
-        return idKtegori;
+    public int getIdKategori() {
+        return idKategori;
     }
 
     public String getNamaKategori() {
+        return namaKategori;
+    }
+
+    @Override
+    public String toString() {
         return namaKategori;
     }
    

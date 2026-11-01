@@ -4,6 +4,9 @@
  */
 package Tagihan;
 
+import Model.Pesanan;
+import java.util.List;
+
 /**
  *
  * @author Asus
@@ -17,7 +20,22 @@ public class Struk {
         this.totalBayar = totalBayar;
     }
   
-    public void tampilkanStruk(){
-    
-    } 
+    public void tampilkanStruk(List<Pesanan> pesananList, double uangBayar){
+        System.out.println("\n========================================");
+        System.out.println("            STRUK PEMBAYARAN            ");
+        System.out.println("========================================");
+        System.out.println("Nomor Struk : #" + nomorStruk);
+        System.out.println("----------------------------------------");
+        System.out.println("Detail Pesanan:");
+        for (Pesanan p : pesananList) {
+            p.tampilkanInfo();
+        } 
+        System.out.println("----------------------------------------");
+        System.out.printf("Total Bayar : Rp%.2f%n", totalBayar);
+        System.out.printf("Uang Bayar  : Rp%.2f%n", uangBayar);
+        System.out.printf("Kembalian   : Rp%.2f%n", uangBayar - totalBayar);
+        System.out.println("========================================");
+        System.out.println("        Terima kasih sudah belanja!     ");
+        System.out.println("========================================\n");
+    }
 }

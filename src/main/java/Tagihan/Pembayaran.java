@@ -14,7 +14,12 @@ public class Pembayaran {
     private double kembalian;
     
     public Pembayaran(double totalBayar, double uangBayar){
-    
+        if (uangBayar < totalBayar){
+            throw new IllegalArgumentException("Uang bayar kurang dari total belanja!");
+        }
+        this.totalBayar = totalBayar;
+        this.uangBayar = uangBayar;
+        this.kembalian = uangBayar - totalBayar;
     }
     
     public double getTotalBayar(){
@@ -30,7 +35,11 @@ public class Pembayaran {
     }
     
     public void tampilakanStruk(){
-    
+        System.out.println("----------------------------------------");
+        System.out.printf("Total Bayar : Rp%.2f%n", totalBayar);
+        System.out.printf("Uang Bayar  : Rp%.2f%n", uangBayar);
+        System.out.printf("Kembalian   : Rp%.2f%n", kembalian);
+        System.out.println("----------------------------------------");
     }
     
 }

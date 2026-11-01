@@ -32,6 +32,7 @@ public class Transaksi {
     }
    
     public void tampilkanInfo(){
-        
+        System.out.printf("  %-20s | Jumlah: %-3d | Total: Rp%.2f%n",
+                            namaProduk, jumlah, total);
     }
 }

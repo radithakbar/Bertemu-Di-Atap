@@ -9,7 +9,8 @@ package Author;
  * @author Asus
  */
 public interface Login {
-   public void login(String userName);
-   public void logout();
+    boolean login(String username, String password);
+   
+    void logout();
    
 }

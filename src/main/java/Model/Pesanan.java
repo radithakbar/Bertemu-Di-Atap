@@ -16,6 +16,7 @@ public class Pesanan {
     public Pesanan(Produk produk, int jumlah) {
         this.produk = produk;
         this.jumlah = jumlah;
+        this.subtotal = produk.getHarga() * jumlah;
     }
 
     public Produk getProduk() {
@@ -31,7 +32,8 @@ public class Pesanan {
     }
     
     public void tampilkanInfo(){
-        
+        System.out.printf(" %-20s | Jumlah: %-3d | Subtotal: Rp%.2f%n", 
+                            produk.getNamaProduk(), jumlah, subtotal);
     }
     
 }
